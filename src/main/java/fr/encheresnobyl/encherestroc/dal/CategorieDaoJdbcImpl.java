@@ -4,6 +4,7 @@
 package fr.encheresnobyl.encherestroc.dal;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import fr.encheresnobyl.encherestroc.bo.Categorie;
 
 /**
  * @author mlebris2021
- * class which implements the method from
+ * class which implements the method from CategorieManager interface
  */
 public class CategorieDaoJdbcImpl implements CategorieDao {
 	
@@ -28,8 +29,12 @@ public class CategorieDaoJdbcImpl implements CategorieDao {
 		List<Categorie>lstCategorie = new ArrayList<>();
 		
 		try(Connection conn = ConnectionProvider.getConnection()){
-			ResultSet rs = conn.createStatement().executeQuery(SELECT_ALL_CATEGORIE);
+			//Nous avons décidé de faire toutes les requêtes en PreparedStatement
+			//We have decided to make all query by using the PreparedStatement method.
+			//ResultSet rs = conn.createStatement().executeQuery(SELECT_ALL_CATEGORIE);
 			
+			PreparedStatement state = conn.prepareStatement(SELECT_ALL_CATEGORIE);
+			ResultSet rs = state.executeQuery();
 			Categorie categorie = null;
 			while (rs.next()) {
 				int noCategorie = rs.getInt("no_categorie");
