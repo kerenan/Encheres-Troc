@@ -8,6 +8,8 @@ package fr.encheresnobyl.encherestroc.bo;
  *
  */
 public class Utilisateur {
+	
+	
 
 	private boolean administrateur;
 	private int numeroUtilisateur;
