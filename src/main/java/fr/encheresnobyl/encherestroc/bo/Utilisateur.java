@@ -11,7 +11,6 @@ public class Utilisateur {
 	
 	
 
-	private boolean administrateur;
 	private int numeroUtilisateur;
 	private String pseudo;
 	private String nom;
@@ -19,9 +18,11 @@ public class Utilisateur {
 	private String email;
 	private String telephone;
 	private String rue;
-	private int codePostal;
+	private String codePostal;
 	private String ville;
-	private String MotDePasse;
+	private String motDePasse;
+	private int credit;
+	private boolean administrateur;
 	
 	
 	/**
@@ -37,9 +38,9 @@ public class Utilisateur {
 	 * @param ville
 	 * @param motDePasse
 	 */
-	public Utilisateur(boolean administrateur, int numeroUtilisateur, String pseudo, String nom, String prenom,
-			String email, String telephone, String rue, int codePostal, String ville, String motDePasse) {
-		this(pseudo,nom,prenom,email,telephone,rue,codePostal,ville,motDePasse);
+	public Utilisateur(int numeroUtilisateur, String pseudo, String nom, String prenom,
+			String email, String telephone, String rue, String codePostal, String ville, String motDePasse, int credit, boolean administrateur) {
+		this(pseudo,nom,prenom,email,telephone,rue,codePostal,ville,motDePasse, credit);
 		setAdministrateur(administrateur);
 		setNumeroUtilisateur(numeroUtilisateur);		
 	}
@@ -56,7 +57,7 @@ public class Utilisateur {
 	 * @param motDePasse
 	 */
 	public Utilisateur(String pseudo, String nom, String prenom, String email, String telephone, String rue,
-			int codePostal, String ville, String motDePasse) {
+			String codePostal, String ville, String motDePasse, int credit) {
 		this();
 		setPseudo(pseudo);
 		setNom(nom);
@@ -67,7 +68,11 @@ public class Utilisateur {
 		setCodePostal(codePostal);
 		setVille(ville);
 		setMotDePasse(motDePasse);
+		setCredit(credit);
 	}
+	
+	
+	
 	/**
 	 * @return the administrateur
 	 */
@@ -138,7 +143,7 @@ public class Utilisateur {
 	/**
 	 * @return the codePostal
 	 */
-	public int getCodePostal() {
+	public String getCodePostal() {
 		return codePostal;
 	}
 	/**
@@ -151,8 +156,13 @@ public class Utilisateur {
 	 * @return the motDePasse
 	 */
 	public String getMotDePasse() {
-		return MotDePasse;
+		return motDePasse;
 	}
+	
+	public int getCredit() {
+		return credit;
+	}
+	
 	/**
 	 * @param pseudo the pseudo to set
 	 */
@@ -190,10 +200,10 @@ public class Utilisateur {
 		this.rue = rue;
 	}
 	/**
-	 * @param codePostal the codePostal to set
+	 * @param codePostal2 the codePostal to set
 	 */
-	public void setCodePostal(int codePostal) {
-		this.codePostal = codePostal;
+	public void setCodePostal(String codePostal2) {
+		this.codePostal = codePostal2;
 	}
 	/**
 	 * @param ville the ville to set
@@ -205,9 +215,19 @@ public class Utilisateur {
 	 * @param motDePasse the motDePasse to set
 	 */
 	public void setMotDePasse(String motDePasse) {
-		MotDePasse = motDePasse;
+		this.motDePasse = motDePasse;
 	}
-	
-	
+
+	public void setCredit(int credit) {
+		this.credit = credit;
+	}
+
+	@Override
+	public String toString() {
+		return "Utilisateur [numeroUtilisateur=" + numeroUtilisateur + ", pseudo=" + pseudo + ", nom=" + nom
+				+ ", prenom=" + prenom + ", email=" + email + ", telephone=" + telephone + ", rue=" + rue
+				+ ", codePostal=" + codePostal + ", ville=" + ville + ", motDePasse=" + motDePasse + ", credit="
+				+ credit + ", administrateur=" + administrateur + "]";
+	}
 	
 }
