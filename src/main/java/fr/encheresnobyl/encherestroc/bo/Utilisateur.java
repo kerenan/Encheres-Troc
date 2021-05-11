@@ -8,5 +8,7 @@ package fr.encheresnobyl.encherestroc.bo;
  *
  */
 public class Utilisateur {
+	
+	
 
 }
