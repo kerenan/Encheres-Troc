@@ -19,15 +19,15 @@ public class DAOFactory {
 		return new EnchereDaoJdbcImpl();
 	}
 	
-	public static ArticleVenduDao getArticleVenduDOA() {
+	public static ArticleVenduDao getArticleVenduDAO() {
 		return new ArticleVenduDaoJdbcImpl();
 	}
 	
-	public static CategorieDao getCategorieDOA() {
+	public static CategorieDao getCategorieDAO() {
 		return new CategorieDaoJdbcImpl();
 	}
 	
-	public static RetraitDao getRetraitDOA() {
+	public static RetraitDao getRetraitDAO() {
 		return new RetraitDaoJdbcImpl();
 	}
 }
