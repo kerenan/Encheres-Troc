@@ -28,5 +28,5 @@ public interface ArticleVenduManagerInt {
 	 * @param noCategorie:int
 	 * @return List<ArticleVendu>
 	 */
-	List<ArticleVendu> getByNomAndCategorie(String nom, int noCategorie);
+	List<ArticleVendu> getByNomAndCategorie(String nom, String noCategorie);
 }
