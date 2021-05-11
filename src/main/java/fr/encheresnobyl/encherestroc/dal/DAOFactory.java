@@ -12,22 +12,22 @@ public class DAOFactory {
 	private DAOFactory() {}
 	
 	public static UtilisateurDao getUtilisateurDAO() {
-		return new UtilisateurDaoJdbcImpl;
+		return new UtilisateurDaoJdbcImpl();
 	}
 	
 	public static EnchereDao getEnchereDAO() {
-		return new EnchereDaoJdbcImpl;
+		return new EnchereDaoJdbcImpl();
 	}
 	
 	public static ArticleVenduDao getArticleVenduDOA() {
-		return new ArticleVenduDaoJdbcImpl;
+		return new ArticleVenduDaoJdbcImpl();
 	}
 	
 	public static CategorieDao getCategorieDOA() {
-		return new CategorieDaoJdbcImpl;
+		return new CategorieDaoJdbcImpl();
 	}
 	
 	public static RetraitDao getRetraitDOA() {
-		return new RetraitDaoJdbcImpl;
+		return new RetraitDaoJdbcImpl();
 	}
 }
