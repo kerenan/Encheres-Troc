@@ -3,14 +3,22 @@
  */
 package fr.encheresnobyl.encherestroc.bo;
 
+import java.io.Serializable;
+
 /**
  * @author rkerhir2021
  *
  */
-public class Utilisateur {
+public class Utilisateur implements Serializable{
 	
-	
-
+	/**
+	 * @author mlebris2021
+	 * add serialVersionUID
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * Attributes
+	 */
 	private int numeroUtilisateur;
 	private String pseudo;
 	private String nom;
