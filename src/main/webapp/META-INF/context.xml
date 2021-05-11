@@ -5,9 +5,9 @@
 		driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
 		type="javax.sql.DataSource"
 		
-		url="jdbc:sqlserver://localhost;databasename=JEE_ENCHERES_TROC"
-		username="utilBDD"
-		password="incorrect"
+		url="jdbc:sqlserver://localhost;databasename=ENCHERES"
+		username="sa"
+		password="Pa$$w0rd"
 		
 		maxTotal="100"
 		maxIdle="30"
