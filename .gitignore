@@ -26,3 +26,4 @@ context.xml
 hs_err_pid*
 
 /build/
+/.classpath
