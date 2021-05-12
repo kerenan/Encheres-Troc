@@ -5,12 +5,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Accueil</title>
 </head>
 <body>
 	<h1 align="center" >Liste des enchères</h1>
 	<div>
-		<form action="">
+		<form action="" method="POST">
 			<label>filtres :</label>
 			<br>
 			<br>
