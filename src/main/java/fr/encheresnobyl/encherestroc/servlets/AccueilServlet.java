@@ -50,7 +50,7 @@ public class AccueilServlet extends HttpServlet {
 			request.setAttribute("sessionId", "bla");
 		request.setAttribute("categories", categories);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/accueil.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/front-office-user/accueil.jsp");
 		rd.forward(request, response);
 	}
 
@@ -76,27 +76,27 @@ public class AccueilServlet extends HttpServlet {
 		// TODO recuperation sessionId
 			int sessionId = 1;
 		
-		if(achatVente.isEmpty()) {
+		if(achatVente!=null) {
 			List<String> coche =new ArrayList<String>();
 			if(achatVente.equals("achats")) {
-				if(enchereOuverte.isEmpty()) {
+				if(!enchereOuverte.isEmpty()) {
 					coche.add(enchereOuverte);
 				}
-				if(enchereUtilisateur.isEmpty()) {
+				if(!enchereUtilisateur.isEmpty()) {
 					coche.add(enchereUtilisateur);
 				}
-				if(enchereRemporte.isEmpty()) {
+				if(!enchereRemporte.isEmpty()) {
 					coche.add(enchereRemporte);
 				}
 			}
 			if(achatVente.equals("ventes")) {
-				if(ventesEnCours.isEmpty()) {
+				if(!ventesEnCours.isEmpty()) {
 					coche.add(ventesEnCours);
 				}
-				if(ventesNonDebute.isEmpty()) {
+				if(!ventesNonDebute.isEmpty()) {
 					coche.add(ventesNonDebute);
 				}
-				if(ventesTermine.isEmpty()) {
+				if(!ventesTermine.isEmpty()) {
 					coche.add(ventesTermine);
 				}
 			}
@@ -115,7 +115,7 @@ public class AccueilServlet extends HttpServlet {
 		request.setAttribute("categories", categories);
 		request.setAttribute("articles", listeArticles);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/accueil.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/front-office-user/accueil.jsp");
 		rd.forward(request, response);
 		
 	}
