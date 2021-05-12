@@ -14,12 +14,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-sm-12">
-				<form method="post" action="<c:url value="/"/>">
+				<form method="post" action="<c:url value="/connexion"/>">
 					<div class="form-group row">
 						<label for="login" class="col-sm-2 col-form-label">Identifiant
 							:</label>
 						<div class="col-sm-10">
-							<input type="email" class="form-control" id="login">
+							<input type="text" class="form-control" id="login" name="login">
 						</div>
 					</div>
 					<div class="form-group row">
@@ -27,23 +27,30 @@
 							de passe :</label>
 						<div class="col-sm-10">
 							<input type="password" class="form-control" id="password"
-								placeholder="Password">
+								name="password">
 						</div>
 					</div>
 					<div class="form-group row">
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<button type="submit" class="btn btn-primary">Connexion</button>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-7">
 							<div class="form-check">
-								<input class="form-check-input" type="checkbox" id="gridCheck1">
-								<label class="form-check-label" for="gridCheck1">Se
-									souvenir de moi</label>
+								<input class="form-check-input" type="checkbox" id="remember"
+									name="remember"> <label class="form-check-label"
+									for="remember">Se souvenir de moi</label>
 							</div>
 							<div>
 								<!-- TODO -->
 								<a href="">Mot de passe oublié</a>
 							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-sm-12">
+							<input type="submit" class="btn btn-primary"
+								name="new-account" value="Créer un
+							compte" />
 						</div>
 					</div>
 				</form>
