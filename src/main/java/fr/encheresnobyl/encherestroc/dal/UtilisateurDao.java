@@ -36,11 +36,10 @@ public interface UtilisateurDao {
 	Boolean selectByMail(String mail);
 	
 	/**
-	 * Méthode en charge de récupérer un utilisateur en fonction de son pseudo ou de son mail
+	 * Méthode en charge de récupérer un utilisateur en fonction de son identifiant (pseudo ou mail)
 	 * @param pseudo
-	 * @param mail
 	 * @return
 	 */
-	Utilisateur selectByPseudoOrMail(String pseudo, String mail);
+	Utilisateur selectByIdentifiant(String identifiant);
 
 }

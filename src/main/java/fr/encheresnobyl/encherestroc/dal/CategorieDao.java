@@ -3,6 +3,7 @@
  */
 package fr.encheresnobyl.encherestroc.dal;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import fr.encheresnobyl.encherestroc.bo.Categorie;
@@ -16,7 +17,8 @@ public interface CategorieDao {
 	/**
 	 * Method to get all Categorie from the db
 	 * @return a List of Categorie
+	 * @throws SQLException 
 	 */
-	List<Categorie> getAllCategorie();
+	List<Categorie> getAllCategorie() throws SQLException;
 
 }

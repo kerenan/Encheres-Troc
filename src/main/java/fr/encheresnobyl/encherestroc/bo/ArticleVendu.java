@@ -3,6 +3,7 @@
  */
 package fr.encheresnobyl.encherestroc.bo;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
@@ -11,8 +12,17 @@ import java.time.LocalDate;
  * @version Encheres-Troc - v1.0
  * @date 11 mai 2021 - 09:06:05
  */
-public class ArticleVendu {
+public class ArticleVendu implements Serializable{
+	
 
+	/**
+	 * @author mlebris2021
+	 * add serialVersionUID
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * Attributes
+	 */
 	int noArticle;
 	String nomArticle;
 	String description;
@@ -22,7 +32,20 @@ public class ArticleVendu {
 	int prixVente;
 	boolean etatVente;
 	
-	
+	/**
+	 * Empty constructor
+	 */
+	public ArticleVendu() {
+		
+	}
+	/**
+	 * Constructor
+	 * @param nomArticle
+	 * @param description
+	 * @param dateDebutEncheres
+	 * @param dateFinEncheres
+	 * @param miseAPrix
+	 */
 	public ArticleVendu(String nomArticle, String description, LocalDate dateDebutEncheres, LocalDate dateFinEncheres,
 			int miseAPrix) {
 		this.nomArticle = nomArticle;

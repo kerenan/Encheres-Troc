@@ -23,6 +23,7 @@ public class Categorie implements Serializable {
 	 */
 	private Integer noCategorie;
 	private String libelle;
+	//do we really need this attribute ?? There is an * on the diagram but for what.
 	private List<ArticleVendu> lstArticleVendu = new ArrayList<ArticleVendu>();
 	
 	/**
