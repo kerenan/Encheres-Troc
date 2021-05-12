@@ -1,6 +1,7 @@
 package fr.encheresnobyl.encherestroc.servlets;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author mlebris2021
  * Servlet which control the get and post requests
  */
-@WebServlet({ "/connexion" })
+@WebServlet("/connexion")
 public class ConnexionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String CONNECTION_PAGE = "/WEB-INF/front-office-user/connexion.jsp";
