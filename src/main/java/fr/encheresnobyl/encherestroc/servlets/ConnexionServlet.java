@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ConnexionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String CONNECTION_PAGE = "/WEB-INF/front-office-user/connexion.jsp";
-	
+
 	private static final String LOGIN = "login";
 	private static final String PASSWD = "password";
 	private static final String REMEMBER_ME = "remember";
